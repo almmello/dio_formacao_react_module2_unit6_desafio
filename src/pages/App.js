@@ -33,10 +33,12 @@ function App() {
 
   }
 
-  const handleRemoveRepo = (id) => {
+  const handleRemoveRepo = async (id) => {
     console.log('Removendo registro', id);
 
-    // utilizar filter.
+    // Remove o item do array usando filter
+    setRepos(repos.filter(repo => repo.id !== id))
+  
   }
 
 
